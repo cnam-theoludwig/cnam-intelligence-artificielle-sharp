@@ -8,9 +8,9 @@ Projet réalisé dans le cadre de la formation [Ingénieur en Informatique et Sy
 
 ### Membres du groupe
 
-- Matys FREYERMUTH
-- [Théo LUDWIG](https://theoludwig.fr)
-- Shamim SEDGHI
+- [Matys FREYERMUTH](https://github.com/Mfxof)
+- [Théo LUDWIG](https://github.com/theoludwig)
+- [Shamim SEDGHI](https://github.com/shamim130)
 
 ## Prérequis
 
