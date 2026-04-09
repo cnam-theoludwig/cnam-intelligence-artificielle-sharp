@@ -1,0 +1,42 @@
+[project]
+name = "cnam-intelligence-artificielle-sharp"
+version = "1.0.0"
+requires-python = "==3.12.13"
+dependencies = [
+    "matplotlib==3.10.8",
+    "pandas==3.0.2",
+    "pillow==12.2.0",
+    "scikit-learn==1.8.0",
+]
+
+[dependency-groups]
+dev = ["pytest==9.0.3", "pytest-cov==7.1.0", "ruff==0.15.9", "ty==0.0.29"]
+
+[tool.uv]
+add-bounds = "exact"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D",
+    "CPY",
+    "ERA",
+    "T20",
+    "EM101",
+    "PLR2004",
+    "TRY003",
+    "S101",
+    "COM812",
+]

@@ -1,0 +1,9 @@
+{
+  "autoDocstring.docstringFormat": "google",
+  "python.languageServer": "None",
+  "python.terminal.activateEnvironment": false,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true
+  }
+}
