@@ -220,4 +220,7 @@ __marimo__/
 # Project-specific
 datasets/
 runs/
+runs_old/
 *.pt
+models/
+models_old/

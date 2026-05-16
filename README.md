@@ -38,7 +38,8 @@ cp .env.example .env
 
 ```sh
 # Lancer l'entraînement
-uv run src/train.py
+mkdir runs
+uv run src/train.py | tee runs/train_log.txt
 
 # Format
 uv run ruff format .
