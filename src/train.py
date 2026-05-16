@@ -58,9 +58,9 @@ else:
     yaml_path = config_yaml_path
 
 training_configs: list[dict[str, str | int]] = [
-    {"model": "yolo11n.pt", "batch": 8, "imgsz": 512, "name": "yolo11n_512"},
-    {"model": "yolo11s.pt", "batch": 8, "imgsz": 640, "name": "yolo11s_640"},
-    {"model": "yolo11m.pt", "batch": 4, "imgsz": 640, "name": "yolo11m_640"},
+    {"model": "yolo26n.pt", "batch": 8, "imgsz": 512, "name": "yolo26n_512"},
+    {"model": "yolo26s.pt", "batch": 8, "imgsz": 640, "name": "yolo26s_640"},
+    {"model": "yolo26m.pt", "batch": 4, "imgsz": 640, "name": "yolo26m_640"},
 ]
 
 results_summary = []
@@ -80,6 +80,7 @@ for training_config in training_configs:
         device=device,
         patience=40,
         close_mosaic=20,
+
         degrees=20,
         translate=0.15,
         scale=0.6,
@@ -91,10 +92,11 @@ for training_config in training_configs:
         hsv_v=0.4,
         mosaic=1.0,
         mixup=0.0,
-        lr0=0.001,
+
+        lr0=0.0005,
         lrf=0.01,
         optimizer="AdamW",
-        plots=True,
+        plots=True
     )
 
     best_weights_path = Path(train_results.save_dir) / "weights" / "best.pt"
