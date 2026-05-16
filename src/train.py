@@ -18,6 +18,7 @@ ROBOFLOW_VERSION = int(os.environ["ROBOFLOW_VERSION"])
 
 device = 0 if torch.cuda.is_available() else "cpu"
 
+print("ROBOFLOW_VERSION :", ROBOFLOW_VERSION)
 print("CUDA disponible :", torch.cuda.is_available())
 print(
     "GPU :",
@@ -80,7 +81,6 @@ for training_config in training_configs:
         device=device,
         patience=40,
         close_mosaic=20,
-
         degrees=20,
         translate=0.15,
         scale=0.6,
@@ -92,11 +92,10 @@ for training_config in training_configs:
         hsv_v=0.4,
         mosaic=1.0,
         mixup=0.0,
-
         lr0=0.0005,
         lrf=0.01,
         optimizer="AdamW",
-        plots=True
+        plots=True,
     )
 
     best_weights_path = Path(train_results.save_dir) / "weights" / "best.pt"
