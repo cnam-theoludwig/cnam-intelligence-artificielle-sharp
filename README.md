@@ -29,13 +29,16 @@ cd cnam-intelligence-artificielle-sharp
 
 # Installer les dépendances
 uv sync --frozen
+
+# Copier le fichier d'environnement et remplir les variables
+cp .env.example .env
 ```
 
 ## Utilisation
 
 ```sh
-# Lancer le projet
-uv run src/main.py
+# Lancer l'entraînement
+uv run src/train.py
 
 # Format
 uv run ruff format .
