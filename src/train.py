@@ -74,21 +74,29 @@ for training_config in training_configs:
 
     train_results = model.train(
         data=str(yaml_path),
-        epochs=300,
-        imgsz=training_config["imgsz"],
-        batch=training_config["batch"],
+        epochs=200,
+        imgsz=512,
+        batch=8,
         device=device,
-        patience=20,
-        plots=True,
-        save=True,
-        project=runs_project_dir,
-        name=training_config["name"],
-        exist_ok=True,
-        degrees=10,
-        translate=0.1,
-        scale=0.5,
+        patience=40,
+        close_mosaic=20,
+
+        degrees=20,
+        translate=0.15,
+        scale=0.6,
+        shear=5,
+        perspective=0.0005,
         fliplr=0.5,
+        hsv_h=0.02,
+        hsv_s=0.5,
+        hsv_v=0.4,
         mosaic=1.0,
+        mixup=0.0,
+
+        lr0=0.001,
+        lrf=0.01,
+        optimizer="AdamW",
+        plots=True
     )
 
     best_weights_path = Path(train_results.save_dir) / "weights" / "best.pt"
