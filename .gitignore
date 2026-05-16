@@ -216,3 +216,11 @@ __marimo__/
 .streamlit/secrets.toml
 
 .DS_Store
+
+# Project-specific
+datasets/
+runs/
+runs_old/
+*.pt
+models/
+models_old/
