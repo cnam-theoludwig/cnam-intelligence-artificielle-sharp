@@ -94,8 +94,8 @@ Bonus (1 point) : mise en place d'une pipeline de CI exécutant des tests unitai
 
 Plusieurs échéances sont à retenir :
 
-- Présentation des projets : vendredi 29 mai après-midi.
-- Rendu final (GitHub) : jeudi 28 mai à 20h.
+- Présentation des projets : jeudi 11 juin après-midi.
+- Rendu final (GitHub) : dimanche 14 juin à 20h.
 
 Pour la restitution des projets, une présentation avec slides est attendue et pourra alors inclure :
 
