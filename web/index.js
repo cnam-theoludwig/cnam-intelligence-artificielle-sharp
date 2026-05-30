@@ -105,10 +105,24 @@ const tick = async () => {
   }
 }
 
+/**
+ * Resolve once the video has known dimensions (videoWidth > 0).
+ * @returns {Promise<void>}
+ */
+const waitForVideoDimensions = () => {
+  if (video.videoWidth > 0 && video.videoHeight > 0) {
+    return Promise.resolve()
+  }
+  return new Promise((resolve) => {
+    video.addEventListener("loadedmetadata", () => resolve(), { once: true })
+  })
+}
+
 try {
   const stream = await navigator.mediaDevices.getUserMedia({ video: true })
   video.srcObject = stream
   await video.play()
+  await waitForVideoDimensions()
 
   capture.width = video.videoWidth
   capture.height = video.videoHeight

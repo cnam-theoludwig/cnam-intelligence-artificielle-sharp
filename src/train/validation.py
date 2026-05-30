@@ -122,8 +122,7 @@ def validate_dataset(
 ) -> None:
     """Validate every image and label across the train/valid/test splits.
 
-    Returns nothing when the dataset is clean. Raises ValueError if any corrupted image or invalid label is found, so the pipeline halts before
-    training. An image without a label file is treated as a valid background image, consistent with an empty label file.
+    Returns nothing when the dataset is clean. Raises ValueError if any corrupted image or invalid label is found, so the pipeline halts before training. An image without a label file is treated as a valid background image, consistent with an empty label file.
     """
     report = ValidationReport()
     for split in SPLITS:

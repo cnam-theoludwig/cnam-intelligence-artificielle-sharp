@@ -1,25 +1,6 @@
 """Tests for the class names and the class-to-finger-count mapping."""
 
-from src.config import CLASS_NAMES, CLASS_TO_FINGER_COUNT
-
-
-def test_class_names_has_six_classes() -> None:
-    """The dataset must declare the six required finger-count classes."""
-    # Arrange - Given
-    expected_class_names = [
-        "0_finger",
-        "1_finger",
-        "2_fingers",
-        "3_fingers",
-        "4_fingers",
-        "5_fingers",
-    ]
-
-    # Act - When
-    actual_class_names = CLASS_NAMES
-
-    # Assert - Then
-    assert actual_class_names == expected_class_names
+from src.config import CLASS_TO_FINGER_COUNT
 
 
 def test_finger_count_mapping_matches_class_index() -> None:

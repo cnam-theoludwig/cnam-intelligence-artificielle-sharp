@@ -1,5 +1,7 @@
 """FastAPI application exposing the finger-count prediction endpoint."""
 
+from collections.abc import AsyncIterator
+from contextlib import asynccontextmanager
 from dataclasses import asdict
 from io import BytesIO
 from typing import Any
@@ -8,9 +10,21 @@ from fastapi import FastAPI, UploadFile
 from fastapi.staticfiles import StaticFiles
 from PIL import Image
 
-from src.api.inference import predict_image
+from src.api.inference import get_model, predict_image
 
-app = FastAPI(title="SHARP", description="Smart Hand Automated Recognition Project.")
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI) -> AsyncIterator[None]:
+    """Load the YOLO model once at startup so the first request is fast."""
+    get_model()
+    yield
+
+
+app = FastAPI(
+    title="SHARP",
+    description="Smart Hand Automated Recognition Project.",
+    lifespan=lifespan,
+)
 
 
 @app.post("/predict")
