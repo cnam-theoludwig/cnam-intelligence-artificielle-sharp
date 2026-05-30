@@ -32,6 +32,9 @@ uv sync --frozen
 
 # Copier le fichier d'environnement et remplir les variables
 cp .env.example .env
+
+# Télécharger le modèle entraîné
+wget https://github.com/cnam-theoludwig/cnam-intelligence-artificielle-sharp/releases/download/v1.0.0/sharp.pt
 ```
 
 ## Utilisation
@@ -39,7 +42,10 @@ cp .env.example .env
 ```sh
 # Lancer l'entraînement
 mkdir runs
-uv run src/train.py | tee runs/train_log.txt
+uv run -m src.train | tee runs/train_log.txt
+
+# Lancer l'inférence
+uv run -m src.predict
 
 # Format
 uv run ruff format .

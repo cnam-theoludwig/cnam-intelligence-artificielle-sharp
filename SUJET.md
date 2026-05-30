@@ -20,12 +20,12 @@ Les contraintes à respecter pour le projet seront les suivantes :
 
 Le projet SHARP met en oeuvre un ensemble d'outils, de pre-processing et de post-processing pour développer une IA capable de détecter les doigts d'une ou plusieurs mains. La liste des combinaisons est définie et ne peut pas être modifiée :
 
-- 0_doigt
-- 1_doigt
-- 2_doigts
-- 3_doigts
-- 4_doigts
-- 5_doigts
+- 0_finger
+- 1_finger
+- 2_fingers
+- 3_fingers
+- 4_fingers
+- 5_fingers
 
 À noter que si 2 mains sont visibles sur une frame donnée, alors chaque main aura sa propre **bounding box** avec sa classe associée.
 
