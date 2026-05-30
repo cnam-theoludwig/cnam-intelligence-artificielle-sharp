@@ -97,7 +97,7 @@ wheels = [
 
 [[package]]
 name = "cnam-intelligence-artificielle-sharp"
-version = "1.0.0"
+version = "2.0.0"
 source = { virtual = "." }
 dependencies = [
     { name = "fastapi" },

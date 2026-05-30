@@ -34,7 +34,7 @@ uv sync --frozen
 cp .env.example .env
 
 # Télécharger le modèle entraîné
-wget https://github.com/cnam-theoludwig/cnam-intelligence-artificielle-sharp/releases/download/v1.0.0/sharp.pt
+wget https://github.com/cnam-theoludwig/cnam-intelligence-artificielle-sharp/releases/download/v2.0.0/sharp.pt
 ```
 
 ## Utilisation

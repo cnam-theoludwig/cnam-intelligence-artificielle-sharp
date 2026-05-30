@@ -1,6 +1,6 @@
 [project]
 name = "cnam-intelligence-artificielle-sharp"
-version = "1.0.0"
+version = "2.0.0"
 requires-python = "==3.12.13"
 dependencies = [
     "fastapi==0.136.3",
