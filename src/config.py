@@ -29,6 +29,7 @@ MODEL_PATH = "sharp.pt"
 INFERENCE_IMAGE_SIZE = 960
 INFERENCE_CONFIDENCE = 0.5
 INFERENCE_IOU = 0.45
+INFERENCE_MAX_DETECTIONS = 4
 
 # Ultralytics device selector: a GPU index (0) or "cpu".
 type Device = int | str
@@ -85,6 +86,9 @@ class RoboflowSettings:
 
 
 load_dotenv()
+
+HOST = os.environ.get("HOST", "0.0.0.0")
+PORT = int(os.environ.get("PORT", "8080"))
 
 ROBOFLOW_SETTINGS = RoboflowSettings(
     api_key=os.environ.get("ROBOFLOW_API_KEY", ""),

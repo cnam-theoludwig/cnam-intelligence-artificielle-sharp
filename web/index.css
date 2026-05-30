@@ -1,0 +1,83 @@
+:root {
+  --background: #0f1115;
+  --surface: #1a1d24;
+  --text: #e6e8eb;
+  --accent: #4ade80;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+}
+
+header {
+  padding: 1rem 1.5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#status {
+  margin: 0.25rem 0 0;
+  color: #9aa0a8;
+  font-size: 0.9rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.feed {
+  position: relative;
+  line-height: 0;
+}
+
+.feed video,
+.feed canvas {
+  width: 640px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.feed canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 3rem;
+  background: var(--surface);
+  border-radius: 12px;
+}
+
+.counter-label {
+  font-size: 1rem;
+  color: #9aa0a8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.counter-value {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
