@@ -42,10 +42,10 @@ wget https://github.com/cnam-theoludwig/cnam-intelligence-artificielle-sharp/rel
 ```sh
 # Lancer l'entraînement
 mkdir runs
-uv run src/train.py | tee runs/train_log.txt
+uv run -m src.train | tee runs/train_log.txt
 
 # Lancer l'inférence
-uv run src/predict.py
+uv run -m src.predict
 
 # Format
 uv run ruff format .
