@@ -33,7 +33,7 @@ def main() -> None:
     dataset_yaml_path = prepare_dataset(dataset_path)
 
     # 4. Training
-    report_training_start(ROBOFLOW_SETTINGS.project)
+    report_training_start()
     best_weights_path = train_model(dataset_yaml_path, DEVICE)
 
     # 5. Evaluation

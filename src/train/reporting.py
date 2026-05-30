@@ -16,9 +16,8 @@ def report_config(settings: RoboflowSettings) -> None:
     print("Hardware:", hardware)
 
 
-def report_training_start(project: str) -> None:
-    """Print the project name and the training configuration."""
-    print("\nTraining:", project)
+def report_training_start() -> None:
+    """Print the training configuration."""
     print("Configuration:")
     for name, value in TRAINING_CONFIG.items():
         print(f"  {name}: {value}")
