@@ -102,3 +102,15 @@ Réponse :
     "total_fingers": 2
 }
 ```
+
+## Docker
+
+Le déploiement final se fait dans un conteneur Docker. Le modèle (`sharp.pt`) n'est pas inclus dans l'image : il est monté depuis la racine du dépôt au démarrage (étape `wget` de l'installation requise au préalable).
+
+```sh
+# CPU (fonctionne partout)
+docker compose up --build
+
+# GPU NVIDIA (nécessite le NVIDIA Container Toolkit)
+docker compose -f compose.yaml -f compose.gpu.yaml up --build
+```
